@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 body {
-    height: 100%;
-    background-color: whitesmoke;
     margin: 0;
+    background-color: whitesmoke;
+    height: 100%
 }

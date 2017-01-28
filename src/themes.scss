@@ -4,10 +4,10 @@
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 .dark-theme {
-  $dark-primary: md-palette($md-purple);
-  $dark-accent: md-palette($md-green);
-  $dark-theme: md-dark-theme($dark-primary, $dark-accent);
+    $dark-primary: md-palette($md-purple);
+    $dark-accent: md-palette($md-green);
+    $dark-theme: md-dark-theme($dark-primary, $dark-accent);
 
-  //Apply to all components
-  @include angular-material-theme($dark-theme);
+    //Apply to all components
+    @include angular-material-theme($dark-theme);
 }
