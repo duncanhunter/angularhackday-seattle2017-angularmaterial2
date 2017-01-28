@@ -23,8 +23,7 @@ export class SwapiService {
         delete result['edited'];
         delete result['name'];
       }
-      const keys = Object.keys(result).map(key => key.replace(/[_-]/g, ' '));
-      return Object.assign({}, result, { keys: keys }, { name: name });
+      return Object.assign({}, result, { keys: Object.keys(result) }, { name: name });
     });
   }
 

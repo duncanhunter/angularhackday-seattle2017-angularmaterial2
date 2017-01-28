@@ -1,19 +1,19 @@
+.nav-menu {
+  margin-left: auto;
+}
+
 md-sidenav {
-    width: 220px;
+  width: 220px;
 }
 
 md-sidenav-container {
-    height: 100vh;
+  height: 100vh;
 }
 
 md-card {
-    margin: 10px;
+  margin: 15px;
 }
 
-md-card > p {
-    text-transform: capitalize;
-}
-
-.theme-menu {
-    margin-left: auto;
+md-card-content > p {
+  text-transform: capitalize;
 }

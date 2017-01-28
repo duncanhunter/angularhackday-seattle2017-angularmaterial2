@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SwapiService } from './swapi.service';
-import {Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,9 @@ export class AppComponent {
   items$: Observable<any>;
   isDarkTheme = false;
 
-  constructor(private swapiService: SwapiService) { }
+  constructor(private swapiService: SwapiService) {
+    this.get('planets');
+  }
 
   get(type: string) {
     this.items$ = this.swapiService.get(type);
