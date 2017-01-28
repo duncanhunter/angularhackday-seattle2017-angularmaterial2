@@ -1,3 +1,31 @@
-<md-toolbar color="primary">
-  <span>Angular Material 2</span>
-</md-toolbar>
+<div [class.dark-theme]="isDarkTheme">
+  <md-toolbar color="primary">
+    <span>Angular Material 2</span>
+    <md-menu #appMenu="mdMenu">
+      <button md-menu-item (click)="isDarkTheme = false">Light Theme</button>
+      <button md-menu-item (click)="isDarkTheme = true">Dark Theme</button>
+    </md-menu>
+    <button class="theme-menu" md-icon-button [mdMenuTriggerFor]="appMenu">
+   <md-icon>more_vert</md-icon></button>
+  </md-toolbar>
+
+  <md-sidenav-container>
+    <md-sidenav mode="side" opened>
+      <md-nav-list>
+        <md-list-item (click)="get('planets')">Planets</md-list-item>
+        <md-list-item (click)="get('species')">Species</md-list-item>
+        <md-list-item (click)="get('people')">People</md-list-item>
+      </md-nav-list>
+    </md-sidenav>
+    <div fxLayout="row" fxLayoutAlign="center" fxLayoutWrap>
+      <md-card *ngFor="let item of items$ | async">
+        <md-card-header>
+          <h4>{{item.name}}</h4>
+        </md-card-header>
+        <md-card-content>
+          <p *ngFor="let key of item.keys">{{key}}: {{item[key]}}</p>
+        </md-card-content>
+      </md-card>
+    </div>
+  </md-sidenav-container>
+  </div>

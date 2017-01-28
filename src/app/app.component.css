@@ -1,0 +1,19 @@
+md-sidenav {
+    width: 220px;
+}
+
+md-sidenav-container {
+    height: 100vh;
+}
+
+md-card {
+    margin: 10px;
+}
+
+md-card > p {
+    text-transform: capitalize;
+}
+
+.theme-menu {
+    margin-left: auto;
+}
